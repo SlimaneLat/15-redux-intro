@@ -31,7 +31,7 @@ const accountSlice = createSlice({
     },
   },
 });
-console.log(accountSlice);
+console.log(accountSlice.reducer);
 
 export const { deposit, withdraw, requestLoan, payLoan } = accountSlice.actions;
 

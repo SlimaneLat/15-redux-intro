@@ -3,8 +3,10 @@ import accountReducer from "./features/accounts/accountSlice";
 import costumerReducer from "./features/customers/customerSlice";
 
 const store = configureStore({
-  account: accountReducer,
-  costumer: costumerReducer,
+  reducer: {
+    account: accountReducer,
+    costumer: costumerReducer,
+  },
 });
 
 export default store;
