@@ -13,7 +13,9 @@ function AccountOperations() {
   const account = useSelector((store) => store.account);
 
   function handleDeposit() {
+    if (!depositAmount) return;
     dispatch(deposit(depositAmount, currency));
+    // dispatch(deposit(depositAmount));
     setDepositAmount("");
     setCurrency("USD");
   }
@@ -36,7 +38,6 @@ function AccountOperations() {
     if (account.loan === 0) return;
     dispatch(payLoan());
   }
-  console.log(account.balance);
 
   return (
     <div>
